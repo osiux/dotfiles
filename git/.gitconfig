@@ -1,0 +1,20 @@
+[user]
+	email = me@osiux.ws
+	name = Eduardo Reveles
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+[core]
+	excludesfile = ~/.gitignore_global
+[diff]
+	algorithm = patience
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+#	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
