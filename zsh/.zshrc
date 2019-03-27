@@ -18,7 +18,7 @@ alias ping='ping -c 5'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias nano='nano -Sw'
+alias nano='nano -w'
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias vvv='function __vvv() { (cd ~/dev/wordpress && vagrant $*); unset -f __vvv; }; __vvv'
 alias gumgum='function __gumgum() { (cd ~/dev/gumgum/vagrants && vagrant $*); unset -f __gumgum;  }; __gumgum'
@@ -62,3 +62,13 @@ alias todo=todo.sh
 if [[ -s "${HOME}/.todo/config" ]]; then
   source "${HOME}/.todo/config"
 fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/eduardo/.nvm/versions/node/v8.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/eduardo/.nvm/versions/node/v8.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/eduardo/.nvm/versions/node/v8.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/eduardo/.nvm/versions/node/v8.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/eduardo/.nvm/versions/node/v8.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/eduardo/.nvm/versions/node/v8.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
